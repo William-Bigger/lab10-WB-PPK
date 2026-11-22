@@ -20,10 +20,10 @@ def add(a, b):
 def subtract(a, b):
     return a - b
 
-def multiply(a, b):
+def mul(a, b):
     return a * b
 
-def divide(a, b):
+def div(a, b):
     if a == 0:
         raise ZeroDivisionError("division by zero")
     return b / a
@@ -33,9 +33,6 @@ def logarithm(a, b):
         raise ValueError("invalid logarithm")
     return math.log(b, a)
 
-def exponent(a, b):
-    return a ** b
-
 def square_root(a):
     if a < 0:
         raise ValueError("cannot take square root of a negative number")
@@ -44,20 +41,8 @@ def square_root(a):
 def hypotenuse(a, b):
     return math.hypot(a, b)
 
-def sub(a, b):
-    return subtract(a, b)
-
-def mul(a, b):
-    return multiply(a, b)
-
-def div(a, b):
-    return divide(a, b)
-
-def log(a, b):
-    return logarithm(a, b)
-
 def exp(a, b):
-    return exponent(a, b)
+    return a ** b
 
 
 
