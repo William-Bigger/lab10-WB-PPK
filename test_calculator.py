@@ -15,45 +15,45 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(add(10, 5), 15)
 
     def test_subtract(self):
-        self.assertEqual(sub(5, 3), 2)
-        self.assertEqual(sub(10, 10), 0)
-        self.assertEqual(sub(-4, 2), -6)
+        self.assertEqual(subtract(5, 3), 2)
+        self.assertEqual(subtract(10, 10), 0)
+        self.assertEqual(subtract(-4, 2), -6)
 
     # ##########################
 
     ######## Partner 1
     def test_multiply(self):  # 3 assertions
-        self.assertEqual(mul(5, 5), 25)
-        self.assertEqual(mul(-2, 1), -2)
-        self.assertEqual(mul(2, 0), 0)
+        self.assertEqual(multiply(5, 5), 25)
+        self.assertEqual(multiply(-2, 1), -2)
+        self.assertEqual(multiply(2, 0), 0)
 
     def test_divide(self):  # 3 assertions
-        self.assertEqual(div(4, 20), 5)
-        self.assertEqual(div(-2, 10), -5)
-        self.assertAlmostEqual(div(8, 4), 0.5)
+        self.assertEqual(divide(4, 20), 5)
+        self.assertEqual(divide(-2, 10), -5)
+        self.assertAlmostEqual(divide(8, 4), 0.5)
 
     # ##########################
 
     ######## Partner 2
     def test_divide_by_zero(self):  # 1 assertion
         with self.assertRaises(ZeroDivisionError):
-            div(0, 5)
+            divide(0, 5)
 
     def test_logarithm(self):  # 3 assertions
-        self.assertAlmostEqual(log(2, 8), 3)
-        self.assertAlmostEqual(log(10, 100), 2)
-        self.assertAlmostEqual(log(3, 27), 3)
+        self.assertAlmostEqual(logarithm(2, 8), 3)
+        self.assertAlmostEqual(logarithm(10, 100), 2)
+        self.assertAlmostEqual(logarithm(3, 27), 3)
 
     def test_log_invalid_base(self):  # 1 assertion
         with self.assertRaises(ValueError):
-            log(1, 5)
+            logarithm(1, 5)
 
     # ##########################
 
     ######## Partner 1
     def test_log_invalid_argument(self):  # 1 assertion
         with self.assertRaises(ValueError):
-            log(0, 0)
+            logarithm(0, 0)
 
     def test_hypotenuse(self):  # 3 assertions
         self.assertEqual(hypotenuse(3, 4), 5)
